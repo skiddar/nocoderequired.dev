@@ -55,7 +55,9 @@ body {
 
 .w-code {
   position: relative;
-  display: inline-block;
+  display: block;
+  width: max-content;
+  max-width: 100%;
   font-size: clamp(48px, 8vw, 92px);
 }
 
