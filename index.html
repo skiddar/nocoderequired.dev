@@ -13,6 +13,8 @@
   <meta property="og:url" content="https://nocoderequired.dev/">
   <meta name="twitter:card" content="summary_large_image">
 
+  <link rel="canonical" href="https://nocoderequired.dev/">
+
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -21,6 +23,82 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://nocoderequired.dev/#website",
+        "url": "https://nocoderequired.dev/",
+        "name": "No Code Required",
+        "inLanguage": "en-US",
+        "about": { "@id": "https://nocoderequired.dev/#book" },
+        "publisher": { "@id": "https://nocoderequired.dev/#scott" }
+      },
+      {
+        "@type": "Book",
+        "@id": "https://nocoderequired.dev/#book",
+        "name": "No Code Required",
+        "alternateName": "No Code Required: The Non-Technical Manager's Guide to Engineering Teams",
+        "url": "https://nocoderequired.dev/",
+        "image": "https://nocoderequired.dev/assets/cover.png",
+        "author": { "@id": "https://nocoderequired.dev/#scott" },
+        "publisher": { "@id": "https://nocoderequired.dev/#publisher" },
+        "inLanguage": "en-US",
+        "datePublished": "2026",
+        "genre": ["Business", "Technology Management", "Leadership"],
+        "about": [
+          "Engineering management",
+          "Technology leadership for non-technical managers",
+          "Managing software developers",
+          "CTO leadership"
+        ],
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Non-technical managers and executives leading software engineering teams"
+        },
+        "abstract": "No Code Required is the field guide for non-technical managers running technical teams — how to earn engineers' respect and make sound technical decisions without being technical — by six-time CTO Scott Darden.",
+        "description": "No Code Required is the field guide for non-technical managers running technical teams — how to earn engineers' respect and make sound technical decisions without being technical — by six-time CTO Scott Darden. Drawing on thirty years in engineering and six stints as CTO, it shows non-technical leaders how to evaluate work they can't fully read, direct a team, decide what to build, buy, or outsource, hire well, and ship.",
+        "workExample": [
+          {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/Paperback",
+            "inLanguage": "en-US",
+            "author": { "@id": "https://nocoderequired.dev/#scott" }
+          },
+          {
+            "@type": "Book",
+            "bookFormat": "https://schema.org/EBook",
+            "inLanguage": "en-US",
+            "author": { "@id": "https://nocoderequired.dev/#scott" }
+          }
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://nocoderequired.dev/#scott",
+        "name": "Scott Darden",
+        "url": "https://nocoderequired.dev/",
+        "jobTitle": "Author; six-time Chief Technology Officer",
+        "description": "Scott Darden has spent thirty years in engineering and served six times as CTO, building and leading teams across startups and enterprises.",
+        "knowsAbout": [
+          "Engineering management",
+          "Technology leadership",
+          "Managing software engineering teams",
+          "Hiring engineers",
+          "CTO leadership"
+        ]
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://nocoderequired.dev/#publisher",
+        "name": "Independently published"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -206,8 +284,9 @@
   </section>
 
   <footer class="site-footer">
-    <div class="wrap">
+    <div class="wrap footer-in">
       <p>&copy; 2026 Scott Darden. All rights reserved.</p>
+      <nav class="footer-nav"><a href="/faq.html">FAQ</a></nav>
     </div>
   </footer>
 

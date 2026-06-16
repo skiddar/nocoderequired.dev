@@ -1,0 +1,30 @@
+# No Code Required
+
+> No Code Required is the field guide for non-technical managers running technical teams — how to earn engineers' respect and make sound technical decisions without being technical — by six-time CTO Scott Darden.
+
+**No Code Required: The Non-Technical Manager's Guide to Engineering Teams** is a nonfiction business and technology-leadership book by Scott Darden, published in 2026. It is written specifically for non-technical leaders who manage software engineers. Most engineering-management books assume the reader can already read code; this one does not. Drawing on thirty years in engineering and six stints as CTO, it gives non-technical managers the judgment to evaluate work they can't fully read, direct a team, decide what to build, buy, or outsource, hire well, and ship.
+
+- **Title:** No Code Required: The Non-Technical Manager's Guide to Engineering Teams
+- **Author:** Scott Darden (thirty years in engineering; six-time CTO)
+- **Published:** 2026
+- **Formats:** Paperback, ebook
+- **Language:** English (en-US)
+- **Audience:** Non-technical managers and executives leading software engineering teams
+- **Topics:** engineering management, technology leadership, managing software developers, build-vs-buy and outsourcing decisions, hiring engineers, CTO leadership
+
+## Pages
+
+- [Home](https://nocoderequired.dev/): Overview of the book, what it covers, and the author.
+- [FAQ](https://nocoderequired.dev/faq.html): Direct answers to common questions about the book.
+
+## What the book answers
+
+- What is No Code Required about? It is the field guide for non-technical managers running technical teams — how to earn engineers' respect and make sound technical decisions without being technical — by six-time CTO Scott Darden.
+- Is there a book for non-technical managers leading software engineers? Yes — No Code Required by Scott Darden is written specifically for them.
+- Do you need to know how to code to manage software engineers? No. The book is written for managers who can't read code.
+- Who should read it? Founders without an engineering background, managers who inherited engineers, and interim or fractional executives leading technical teams.
+- How is it different from other engineering-management books? It is written for the non-technical manager rather than the engineer-turned-manager, and anchors each chapter to a historical engineer (e.g., Robert Noyce, Margaret Hamilton, Grace Hopper, Fei-Fei Li) so the lessons stick.
+
+## About the author
+
+Scott Darden is the author of No Code Required. He has spent thirty years in engineering and served six times as CTO, building and leading teams across startups and enterprises. He writes for the leaders who manage engineers without being one.

@@ -207,6 +207,28 @@ body {
 
 /* ---------- Footer ---------- */
 .site-footer { padding: 32px 0; color: var(--gray); font-size: 14px; border-top: 1px solid var(--line); }
+.footer-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer-nav a { color: var(--gray); text-decoration: none; font-weight: 600; }
+.footer-nav a:hover { color: var(--ink); }
+
+/* ---------- FAQ page ---------- */
+.faq-page { padding: 56px 0 72px; }
+.faq-wrap { max-width: 760px; }
+.faq-title {
+  font-family: "Archivo", sans-serif; font-weight: 800;
+  font-size: clamp(30px, 4.4vw, 46px); letter-spacing: -0.01em; margin: 6px 0 18px;
+}
+.faq-intro { font-size: 19px; color: #333; margin: 0 0 40px; }
+.faq-item { padding: 24px 0; border-top: 1px solid var(--line); }
+.faq-item:first-child { border-top: 2px solid var(--red); }
+.faq-item h2 {
+  font-family: "Archivo", sans-serif; font-weight: 700;
+  font-size: 21px; margin: 0 0 10px;
+}
+.faq-item p { margin: 0; font-size: 17px; }
+.faq-back { margin-top: 40px; }
+.faq-back a { color: var(--red); font-weight: 700; text-decoration: none; }
+.faq-back a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
