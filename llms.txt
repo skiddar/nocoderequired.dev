@@ -15,7 +15,7 @@
 ## Pages
 
 - [Home](https://nocoderequired.dev/): Overview of the book, what it covers, and the author.
-- [FAQ](https://nocoderequired.dev/faq.html): Direct answers to common questions about the book.
+- [FAQ](https://nocoderequired.dev/faq): Direct answers to common questions about the book.
 
 ## What the book answers
 
