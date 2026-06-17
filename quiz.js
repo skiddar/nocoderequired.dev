@@ -124,7 +124,7 @@
 
   // ---- Elements ----
   var elIntro, elQ, elResults;
-  var elStart, elProgressLabel, elProgressFill, elStem, elOptions, elBack;
+  var elStart, elProgressLabel, elProgressTrack, elProgressFill, elStem, elOptions, elBack;
   var elBand, elScore, elBandDesc, elFocus, elRetake;
 
   function $(id) { return document.getElementById(id); }
@@ -140,6 +140,10 @@
     var q = QUESTIONS[idx];
     elProgressLabel.textContent = "Question " + (idx + 1) + " of " + QUESTIONS.length;
     elProgressFill.style.width = (idx / QUESTIONS.length * 100) + "%";
+    if (elProgressTrack) {
+      elProgressTrack.setAttribute("aria-valuenow", String(idx + 1));
+      elProgressTrack.setAttribute("aria-valuetext", "Question " + (idx + 1) + " of " + QUESTIONS.length);
+    }
     elStem.textContent = q.stem;
     elOptions.innerHTML = "";
     q.options.forEach(function (opt) {
@@ -152,6 +156,9 @@
       elOptions.appendChild(b);
     });
     elBack.hidden = idx === 0;
+    // move focus to the new question so keyboard/screen-reader users keep their
+    // place and the question is announced (the clicked button was just destroyed)
+    elStem.focus({ preventScroll: true });
   }
 
   function choose(points) {
@@ -202,6 +209,7 @@
 
     hide(elQ); show(elResults);
     elResults.scrollIntoView({ behavior: "smooth", block: "start" });
+    elBand.focus({ preventScroll: true });
   }
 
   function start() {
@@ -213,6 +221,7 @@
   function init() {
     elIntro = $("q-intro"); elQ = $("q-question"); elResults = $("q-results");
     elStart = $("q-start"); elProgressLabel = $("q-progress-label");
+    elProgressTrack = $("q-progress-track");
     elProgressFill = $("q-progress-fill"); elStem = $("q-stem");
     elOptions = $("q-options"); elBack = $("q-back");
     elBand = $("q-band"); elScore = $("q-score"); elBandDesc = $("q-band-desc");

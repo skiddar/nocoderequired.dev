@@ -68,9 +68,9 @@
       <section id="q-question" class="quiz-card quiz-question" hidden>
         <div class="quiz-progress">
           <span id="q-progress-label" class="quiz-progress__label">Question 1 of 10</span>
-          <div class="quiz-progress__track"><div id="q-progress-fill" class="quiz-progress__fill"></div></div>
+          <div id="q-progress-track" class="quiz-progress__track" role="progressbar" aria-label="Quiz progress" aria-valuemin="0" aria-valuemax="10" aria-valuenow="0"><div id="q-progress-fill" class="quiz-progress__fill"></div></div>
         </div>
-        <h2 id="q-stem" class="quiz-stem"></h2>
+        <h2 id="q-stem" class="quiz-stem" tabindex="-1"></h2>
         <div id="q-options" class="quiz-options"></div>
         <button id="q-back" type="button" class="quiz-back" hidden>&larr; Back</button>
       </section>
@@ -78,7 +78,7 @@
       <!-- 3. Results -->
       <section id="q-results" class="quiz-card quiz-results" hidden>
         <p class="eyebrow">Your result <span id="q-score" class="quiz-score"></span></p>
-        <h2 id="q-band" class="quiz-band"></h2>
+        <h2 id="q-band" class="quiz-band" tabindex="-1"></h2>
         <p id="q-band-desc" class="quiz-band-desc"></p>
 
         <h3 class="quiz-focus-head">Where to focus first</h3>

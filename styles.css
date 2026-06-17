@@ -337,6 +337,9 @@ body {
   font-family: var(--serif); font-weight: 600; font-size: clamp(22px, 3vw, 29px);
   line-height: 1.25; margin: 0 0 26px;
 }
+/* these headings receive focus programmatically (for screen readers); the
+   new card content is the visible affordance, so suppress the outline */
+.quiz-stem:focus, .quiz-band:focus { outline: none; }
 .quiz-options { display: flex; flex-direction: column; gap: 12px; }
 .quiz-option {
   font-family: var(--serif); font-size: 18px; text-align: left; color: var(--ink);
