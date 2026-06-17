@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team Health Check — A 2-minute self-assessment for non-technical managers</title>
+  <meta name="description" content="A short self-assessment for non-technical managers leading software engineers. Answer ~10 scenario questions and see where you stand — and which chapters of No Code Required help most. No email required.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Team Health Check — for non-technical managers leading engineers">
+  <meta property="og:description" content="Answer ~10 quick questions and see where you stand leading an engineering team — and where to focus. No email required.">
+  <meta property="og:image" content="https://nocoderequired.dev/assets/cover.png">
+  <meta property="og:url" content="https://nocoderequired.dev/quiz">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="https://nocoderequired.dev/quiz">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.png" sizes="48x48" type="image/png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Newsreader:ital,opsz,wght@0,18..72,400;0,18..72,500;0,18..72,600;0,18..72,700;1,18..72,400;1,18..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://nocoderequired.dev/quiz",
+    "url": "https://nocoderequired.dev/quiz",
+    "name": "Team Health Check — a self-assessment for non-technical managers",
+    "description": "A short self-assessment for non-technical managers leading software engineers, mapping blind spots to chapters of No Code Required.",
+    "inLanguage": "en-US",
+    "isPartOf": { "@id": "https://nocoderequired.dev/#website" },
+    "about": { "@id": "https://nocoderequired.dev/#book" }
+  }
+  </script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="/" aria-label="No Code Required — home">
+        NO <span class="brand-code">CODE</span> REQUIRED
+      </a>
+      <a class="btn btn-primary btn-sm" href="/#buy">Get the book</a>
+    </div>
+  </header>
+
+  <main class="quiz-page">
+    <div class="wrap quiz-wrap">
+
+      <!-- 1. Intro -->
+      <section id="q-intro" class="quiz-card quiz-intro">
+        <p class="eyebrow">A 2-minute self-assessment</p>
+        <h1 class="quiz-title">The Non-Technical Manager’s Team Health Check</h1>
+        <p class="quiz-lede">
+          You’re leading engineers you can’t out-code. Ten quick scenarios will show you where
+          you’re already strong, where your blind spots are, and exactly which chapters of
+          <em>No Code Required</em> help most.
+        </p>
+        <button id="q-start" type="button" class="btn btn-primary">Start the check</button>
+        <p class="quiz-meta">10 questions · about 2 minutes · no email, no sign-up</p>
+      </section>
+
+      <!-- 2. Question -->
+      <section id="q-question" class="quiz-card quiz-question" hidden>
+        <div class="quiz-progress">
+          <span id="q-progress-label" class="quiz-progress__label">Question 1 of 10</span>
+          <div class="quiz-progress__track"><div id="q-progress-fill" class="quiz-progress__fill"></div></div>
+        </div>
+        <h2 id="q-stem" class="quiz-stem"></h2>
+        <div id="q-options" class="quiz-options"></div>
+        <button id="q-back" type="button" class="quiz-back" hidden>&larr; Back</button>
+      </section>
+
+      <!-- 3. Results -->
+      <section id="q-results" class="quiz-card quiz-results" hidden>
+        <p class="eyebrow">Your result <span id="q-score" class="quiz-score"></span></p>
+        <h2 id="q-band" class="quiz-band"></h2>
+        <p id="q-band-desc" class="quiz-band-desc"></p>
+
+        <h3 class="quiz-focus-head">Where to focus first</h3>
+        <ul id="q-focus" class="quiz-focus"></ul>
+
+        <div class="cta-row quiz-actions">
+          <a class="btn btn-primary" href="/#buy">Get the book</a>
+          <button id="q-retake" type="button" class="btn btn-ghost">Retake</button>
+          <a class="btn btn-ghost" href="/">Back to the book</a>
+        </div>
+        <p class="quiz-disclaimer">This self-assessment is a starting point, not a verdict — every team is different.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-in">
+      <p>&copy; 2026 Scott Darden. All rights reserved.</p>
+      <nav class="footer-nav"><a href="/">Home</a> <a href="/faq">FAQ</a></nav>
+    </div>
+  </footer>
+
+  <script src="quiz.js" defer></script>
+</body>
+</html>
