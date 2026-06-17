@@ -112,57 +112,66 @@ body {
   font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
 }
 
-/* ---------- 3D book ---------- */
-.book-stage { perspective: 1800px; display: flex; justify-content: center; }
+/* ---------- 3D book (centered cuboid faces) ---------- */
+.book-stage { perspective: 2200px; display: flex; justify-content: center; position: relative; }
 .book {
-  --w: 310px; --h: 465px; --t: 44px;
+  --w: 310px; --h: 462px; --t: 40px;
   position: relative; width: var(--w); height: var(--h);
   transform-style: preserve-3d;
-  transform: rotateY(-27deg) rotateX(3deg);
+  transform: rotateY(-25deg);
   transition: transform .7s cubic-bezier(.2,.7,.2,1);
 }
-.book--sm { --w: 210px; --h: 315px; --t: 32px; }
-.book-stage:hover .book { transform: rotateY(-13deg) rotateX(2deg); }
+.book--sm { --w: 208px; --h: 312px; --t: 30px; }
+.book-stage:hover .book { transform: rotateY(-14deg); }
+.book > * { position: absolute; }
 
+/* front cover */
 .book__cover {
-  position: absolute; inset: 0; width: 100%; height: 100%;
+  inset: 0; width: 100%; height: 100%;
   object-fit: cover; display: block;
   transform: translateZ(calc(var(--t) / 2));
-  border-radius: 2px 4px 4px 2px;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,.12);
+  border-radius: 1px 3px 3px 1px;
 }
+/* binding shadow down the spine edge of the cover */
+.book__cover { box-shadow: inset 0 0 0 1px rgba(0,0,0,.1); }
+/* lighting: soft diagonal sheen + a darkened binding edge, laid over the cover */
+.book::before {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  transform: translateZ(calc(var(--t) / 2 + 0.4px));
+  border-radius: 1px 3px 3px 1px;
+  background:
+    linear-gradient(100deg, rgba(255,255,255,.16) 0%, rgba(255,255,255,0) 20%, rgba(0,0,0,0) 70%, rgba(0,0,0,.18) 100%),
+    linear-gradient(90deg, rgba(0,0,0,.34) 0, rgba(0,0,0,0) 7%);
+}
+/* back cover */
 .book__back {
-  position: absolute; inset: 0;
-  background: #15233f;
-  transform: translateZ(calc(var(--t) / -2));
-  border-radius: 4px 2px 2px 4px;
+  inset: 0;
+  transform: translateZ(calc(var(--t) / -2)) rotateY(180deg);
+  background: #101d36;
+  border-radius: 3px 1px 1px 3px;
 }
-/* page block on the right (opposite the spine) */
+/* fore-edge: the cut page block on the right (inset so the cover boards overhang) */
 .book__pages {
-  position: absolute; top: 5px; bottom: 5px; right: 0;
-  width: var(--t);
+  top: 4px; right: 0; width: var(--t); height: calc(100% - 8px);
+  transform-origin: center;
+  transform: translateX(calc(var(--t) / 2 - 1.5px)) rotateY(90deg);
   background: repeating-linear-gradient(
-    to right, #cfc2a3 0, #cfc2a3 1px, #f3ecd9 1px, #f3ecd9 3.5px);
-  transform: translateX(calc(var(--t) / 2)) rotateY(90deg);
-  transform-origin: center right;
-  border-radius: 0 1px 1px 0;
+    to right, #c4b693 0, #c4b693 .5px, #f5eedb .5px, #f5eedb 2.5px);
+  box-shadow: inset 0 7px 9px -7px rgba(0,0,0,.55), inset 0 -7px 9px -7px rgba(0,0,0,.55);
 }
-/* spine on the left */
+/* spine on the left (binding) */
 .book__spine {
-  position: absolute; top: 0; bottom: 0; left: 0;
-  width: var(--t);
-  background: linear-gradient(90deg, #0e1a30 0%, #1b2c4d 55%, #24375c 100%);
-  transform: translateX(calc(var(--t) / -2)) rotateY(90deg);
-  transform-origin: center left;
-  box-shadow: inset 0 0 6px rgba(0,0,0,.4);
+  top: 0; left: 0; width: var(--t); height: 100%;
+  transform-origin: center;
+  transform: translateX(calc(var(--t) / -2)) rotateY(-90deg);
+  background: linear-gradient(90deg, #24375c 0%, #16264a 45%, #0c1730 100%);
 }
 /* soft ground shadow */
-.book-stage { position: relative; }
 .book-stage::after {
   content: ""; position: absolute; z-index: -1;
-  left: 14%; right: 6%; bottom: -34px; height: 40px;
-  background: rgba(20,15,8,.34);
-  filter: blur(26px); border-radius: 50%;
+  left: 12%; right: 10%; bottom: -32px; height: 36px;
+  background: rgba(20,15,8,.32);
+  filter: blur(24px); border-radius: 50%;
 }
 
 /* ---------- Who (band) ---------- */
