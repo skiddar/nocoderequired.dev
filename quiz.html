@@ -79,13 +79,18 @@
       <section id="q-results" class="quiz-card quiz-results" hidden>
         <p class="eyebrow">Your result <span id="q-score" class="quiz-score"></span></p>
         <h2 id="q-band" class="quiz-band" tabindex="-1"></h2>
+        <div id="q-meter" class="quiz-meter" aria-hidden="true"></div>
         <p id="q-band-desc" class="quiz-band-desc"></p>
 
-        <h3 class="quiz-focus-head">Where to focus first</h3>
+        <h3 class="quiz-section-head">How you scored, by area</h3>
+        <div id="q-breakdown" class="quiz-breakdown"></div>
+
+        <h3 class="quiz-section-head">Where to focus first</h3>
         <ul id="q-focus" class="quiz-focus"></ul>
 
         <div class="cta-row quiz-actions">
           <a class="btn btn-primary" href="/#buy">Get the book</a>
+          <button id="q-share" type="button" class="btn btn-ghost">Share result</button>
           <button id="q-retake" type="button" class="btn btn-ghost">Retake</button>
           <a class="btn btn-ghost" href="/">Back to the book</a>
         </div>
