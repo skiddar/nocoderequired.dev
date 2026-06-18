@@ -35,8 +35,8 @@
   var ITEMS = [
     { ch: 1,  reverse: false, text: "When something goes wrong, my team tells me early — before it becomes a crisis." },
     { ch: 1,  reverse: true,  text: "People on my team hold back problems until I ask directly." },
-    { ch: 2,  reverse: false, text: "I can say specifically where my team is strong and where it’s dangerously thin." },
-    { ch: 3,  reverse: false, text: "I understand how work actually flows on my team, from idea to shipped." },
+    { ch: 2,  reverse: false, text: "I take stock of where my team is strong and where it’s dangerously thin." },
+    { ch: 3,  reverse: false, text: "I look at where our work gets stuck on the way from idea to shipped." },
     { ch: 4,  reverse: true,  text: "I gauge how productive my team is by how busy people seem." },
     { ch: 4,  reverse: false, text: "I judge the team by the outcomes we ship, not the activity we generate." },
 
@@ -48,7 +48,7 @@
     { ch: 8,  reverse: true,  text: "I commit to deadlines before asking the team how long the work will really take." },
 
     { ch: 9,  reverse: true,  text: "Decisions pile up waiting on me." },
-    { ch: 9,  reverse: false, text: "My team knows which decisions they can make without checking with me." },
+    { ch: 9,  reverse: false, text: "My team makes calls on their own instead of waiting for my sign-off." },
     { ch: 10, reverse: false, text: "When hiring engineers I can’t technically evaluate, I use a structured process and bring in technical help I trust." },
     { ch: 11, reverse: false, text: "I notice when a strong performer’s energy changes, and I follow up." },
     { ch: 11, reverse: true,  text: "I assume people are fine as long as the work keeps getting done." },
