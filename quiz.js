@@ -145,7 +145,10 @@
       elError.textContent = "Please answer every statement — " + missing.length + " still " +
         (missing.length === 1 ? "needs" : "need") + " a response.";
       show(elError);
-      $("item-" + missing[0]).scrollIntoView({ behavior: "smooth", block: "center" });
+      var firstMissing = $("item-" + missing[0]);
+      firstMissing.scrollIntoView({ behavior: "smooth", block: "center" });
+      var r = firstMissing.querySelector("input[type=radio]");
+      if (r) r.focus({ preventScroll: true });
       return;
     }
     hide(elError);
@@ -249,6 +252,10 @@
   function begin() {
     hide(elIntro); hide(elResults); show(elForm);
     elForm.scrollIntoView({ behavior: "smooth", block: "start" });
+    // move focus into the form (the Begin button is now hidden, so focus would
+    // otherwise fall to <body> and keyboard/SR users would lose their place)
+    var first = elItems.querySelector("input[type=radio]");
+    if (first) first.focus({ preventScroll: true });
   }
 
   function retake() {
