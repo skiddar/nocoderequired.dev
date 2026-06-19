@@ -56,27 +56,26 @@
         <p class="eyebrow">A self-assessment</p>
         <h1 class="quiz-title">The Non-Technical Manager’s Team Health Check</h1>
         <p class="quiz-lede">
-          Eighteen statements about how you actually lead your engineering team. It scores
-          where you stand, breaks it down by area, and points you to the chapters of
-          <em>No Code Required</em> that close your biggest gaps.
+          Twelve situations every manager of engineers runs into. For each, you pick the
+          move closer to what you’d actually do — then it scores where you stand, by area,
+          and points you to the chapters of <em>No Code Required</em> that help most.
         </p>
         <div class="quiz-note">
-          <strong>Answer how you actually are — not how you think you should be.</strong>
-          Some statements describe good habits and some describe traps, so “Always” is not
-          always the high score. The result is only useful if you’re honest.
+          <strong>Both options are things reasonable managers do — there’s no obviously right answer.</strong>
+          Don’t pick what sounds best; pick what’s closer to your real instinct. That’s the only way the result tells you anything.
         </div>
         <button id="q-start" type="button" class="btn btn-primary">Begin the assessment</button>
-        <p class="quiz-meta">18 statements · about 3 minutes · no email, no sign-up</p>
+        <p class="quiz-meta">12 quick choices · about 2 minutes · no email · your progress is saved</p>
       </section>
 
       <!-- 2. Assessment form (items rendered by quiz.js) -->
       <form id="q-form" class="quiz-form" hidden novalidate>
-        <p class="quiz-form-reminder">Rate how often each statement is true of you. Be honest — some are worded so that “Always” scores low.</p>
+        <p class="quiz-form-reminder">Pick the option closer to your real instinct. You can change any answer before you submit.</p>
         <div id="q-items"></div>
         <div id="q-error" class="quiz-error" role="alert" hidden></div>
         <div class="quiz-submit-row">
           <button type="submit" class="btn btn-primary">See your results</button>
-          <span id="q-count" class="quiz-count" aria-live="polite">Answered 0 of 18</span>
+          <span id="q-count" class="quiz-count" aria-live="polite">Answered 0 of 12</span>
         </div>
       </form>
 
@@ -96,9 +95,11 @@
         <div class="cta-row quiz-actions">
           <a class="btn btn-primary" href="/#buy">Get the book</a>
           <button id="q-share" type="button" class="btn btn-ghost">Share result</button>
-          <button id="q-retake" type="button" class="btn btn-ghost">Retake</button>
-          <a class="btn btn-ghost" href="/">Back to the book</a>
         </div>
+        <p class="quiz-subactions">
+          <button id="q-edit" type="button" class="quiz-textbtn">← Review or change your answers</button>
+          <button id="q-restart" type="button" class="quiz-textbtn">Start over</button>
+        </p>
         <p class="quiz-disclaimer">A self-assessment reflects how you see yourself — a useful mirror, not a verdict. The sharpest read also asks your team.</p>
       </section>
 
