@@ -93,12 +93,12 @@ body {
   background:
     linear-gradient(180deg, rgba(0,0,0,0) 60%, rgba(0,0,0,.02) 100%);
 }
-.hero-grid { display: grid; grid-template-columns: 1.08fr 1fr; gap: 64px; align-items: center; }
+.hero-grid { display: grid; grid-template-columns: 1.22fr 0.78fr; gap: 48px; align-items: center; }
 .hero-h1 {
   font-family: var(--serif); font-weight: 600;
-  font-size: clamp(32px, 4.8vw, 58px);
-  line-height: 1.07; letter-spacing: -0.015em;
-  margin: 0 0 24px; overflow-wrap: break-word;
+  font-size: clamp(31px, 4.2vw, 48px);
+  line-height: 1.08; letter-spacing: -0.015em;
+  margin: 0 0 24px; overflow-wrap: break-word; text-wrap: balance;
 }
 .hero-sub { font-size: 20px; max-width: 30em; margin: 0 0 30px; color: var(--ink-soft); }
 .hero-sub strong { color: var(--ink); font-weight: 600; }
@@ -258,6 +258,8 @@ body {
 /* ---------- Buy (endpaper) ---------- */
 .buy { background: var(--paper-dark); color: #efe7d5; padding: 88px 0; }
 .buy .section-h2 { color: #fff; }
+.buy .btn-ghost { color: #fff; border-color: rgba(255,255,255,.55); }
+.buy .btn-ghost:hover { background: #fff; color: var(--ink); border-color: #fff; }
 .buy-in { display: flex; align-items: center; gap: 64px; justify-content: center; }
 .buy-cover { flex-shrink: 0; }
 .buy-sub { color: #c3b79c; font-style: italic; margin: 0 0 26px; font-size: 19px; }
