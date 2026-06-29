@@ -16,6 +16,7 @@
 
 - [Home](https://nocoderequired.dev/): Overview of the book, what it covers, and the author.
 - [FAQ](https://nocoderequired.dev/faq): Direct answers to common questions about the book.
+- [Engineering Translation Guide](https://nocoderequired.dev/guide): A free plain-English glossary of ~15 engineering terms for non-technical managers, each citing the chapter it's from.
 - [Self-assessment](https://nocoderequired.dev/quiz): A short Team Health Check for non-technical managers that maps blind spots to chapters of the book.
 
 ## What the book answers
