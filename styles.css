@@ -517,6 +517,48 @@ body {
   .guide-term dd { color: #000; font-size: 8.5pt; line-height: 1.28; }
 }
 
+/* ---------- Further Reading ---------- */
+.reading { padding: 56px 0 20px; }
+.reading-wrap { max-width: 760px; }
+.reading-head { margin-bottom: 10px; }
+.reading-title {
+  font-family: var(--serif); font-weight: 600;
+  font-size: clamp(30px, 4.4vw, 46px); letter-spacing: -0.01em; margin: 8px 0 16px;
+}
+.reading-lede { font-size: 19px; color: var(--ink-soft); margin: 0; }
+.reading-disclosure {
+  font-family: var(--sans); font-size: 13px; color: var(--gray); font-style: italic;
+  background: var(--paper-2); border-left: 3px solid var(--rule);
+  padding: 10px 14px; border-radius: 0 3px 3px 0; margin: 18px 0 0;
+}
+.reading-group { margin-top: 40px; }
+.reading-group__head {
+  font-family: var(--serif); font-weight: 700; font-size: 20px; margin: 0 0 6px;
+  padding-bottom: 10px; border-bottom: 2px solid var(--red);
+}
+.reading-group__head span { color: var(--gray); font-weight: 400; font-style: italic; }
+.reading-list { }
+.reading-book { padding: 17px 0; border-top: 1px solid var(--rule); }
+.reading-book:first-child { border-top: none; }
+.reading-book__title {
+  font-family: var(--serif); font-weight: 700; font-size: 18.5px; color: var(--ink); text-decoration: none;
+}
+.reading-book__title:hover { color: var(--red); text-decoration: underline; text-underline-offset: 3px; }
+.reading-book__by { font-family: var(--serif); font-style: italic; font-size: 16px; color: var(--gray); }
+.reading-book__by::before { content: " — "; font-style: normal; }
+.reading-book__desc { margin: 5px 0 0; font-size: 15.5px; color: var(--ink-soft); line-height: 1.5; }
+.reading-book__label {
+  display: block; font-family: var(--sans); font-size: 11px; font-weight: 700;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--red); margin-bottom: 3px;
+}
+.reading-book--bio { border-top: 1px solid var(--rule); }
+
+.reading-cta { background: var(--paper-dark); color: #efe7d5; padding: 54px 0; text-align: center; margin-top: 40px; }
+.reading-cta__lead { font-family: var(--serif); font-size: 22px; color: #fff; margin: 0 0 22px; }
+.reading-cta .cta-row { justify-content: center; }
+.reading-cta .btn-ghost { color: #fff; border-color: rgba(255,255,255,.55); }
+.reading-cta .btn-ghost:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 900px) {
   .eng-grid { grid-template-columns: repeat(4, 1fr); }
